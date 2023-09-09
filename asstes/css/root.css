@@ -79,7 +79,7 @@
     :root {
         --fs-sm: 16px;
         --fs-md: 20px;
-        --fs-lg: 23px;
+        --fs-lg: 47px;
         --fs-xl: 30px;
         /* font-weight: ; */
         --fw-sm: 300;
@@ -95,5 +95,9 @@
         --color-secandary: #B3B3B3;
         /* --color-bg: #131313; */
         /*--color-tertiary: ; */
+    }
+
+    .white-bg {
+        background: var(--color-main);
     }
 }
