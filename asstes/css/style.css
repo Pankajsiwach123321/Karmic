@@ -13,7 +13,7 @@
 .bg-body {
     background-image: url(../images/backcover.png);
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
 }
 
 .bg-hero {
@@ -146,12 +146,12 @@
 }
 
 .service-card {
-    transition: all 0.5s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
 .started {
     display: flex;
-    padding: 12px 24px;
+    padding: 12px 32px;
     align-items: center;
     gap: 10px;
     border-radius: 82px;
@@ -163,7 +163,7 @@
 
 .startedo {
     display: flex;
-    padding: 12px 24px;
+    padding: 12px 32px;
     align-items: center;
     gap: 10px;
     border-radius: 82px;
@@ -173,9 +173,21 @@
     border: 1px solid var(--color-main);
 }
 
-.starteds {
+.startedso {
     display: flex;
     padding: 12px 24px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 82px;
+    background: white;
+    border-radius: 82px;
+    transition: all 0.5s ease-in-out;
+    border: 1px solid var(--color-main);
+}
+
+.starteds {
+    display: flex;
+    padding: 12px 32px;
     align-items: center;
     gap: 10px;
     border-radius: 82px;
@@ -218,7 +230,7 @@
     content: '';
     position: absolute;
     top: 96%;
-    left: 0%;
+    left: 0;
     width: 174.563px;
     height: 2px;
     transform: rotate(-4.484deg);
@@ -229,10 +241,9 @@
 .project::after {
     content: '';
     position: absolute;
-    top: 111%;
+    bottom: -13%;
     left: 32%;
-    max-width: 344.275px;
-    width: 100%;
+    width: 30%;
     height: 2px;
     transform: rotate(-3.484deg);
     background: #FFF;
@@ -242,9 +253,8 @@
     content: '';
     position: absolute;
     top: -24%;
-    left: 41.5%;
-    max-width: 326.275px;
-    width: 100%;
+    left: 39.5%;
+    width: 29%;
     height: 2px;
     transform: rotate(-4.484deg);
     background: #FFF;
@@ -253,10 +263,9 @@
 .project2::after {
     content: '';
     position: absolute;
-    top: 102%;
-    left: 30%;
-    max-width: 344.275px;
-    width: 100%;
+    bottom: -12%;
+    left: 32%;
+    width: 29%;
     height: 2px;
     transform: rotate(-3.484deg);
     background: #000;
@@ -267,8 +276,7 @@
     position: absolute;
     top: -24%;
     left: 38.5%;
-    max-width: 326.275px;
-    width: 100%;
+    width: 29.5%;
     height: 2px;
     transform: rotate(-4.484deg);
     background: #000;
@@ -277,10 +285,9 @@
 .about::after {
     content: '';
     position: absolute;
-    top: 104%;
-    left: 31%;
-    max-width: 344.275px;
-    width: 100%;
+    bottom: -4%;
+    left: 30%;
+    width: 33%;
     height: 2px;
     transform: rotate(-5.484deg);
     background: var(--color-main);
@@ -295,9 +302,8 @@
     content: '';
     position: absolute;
     top: 49%;
-    left: 37.5%;
-    max-width: 343.275px;
-    width: 100%;
+    left: 37%;
+    width: 31%;
     height: 2px;
     transform: rotate(-4.484deg);
     background: var(--color-main);
@@ -314,9 +320,9 @@
 .service::after {
     content: '';
     position: absolute;
-    top: 111%;
-    left: 30%;
-    width: 344.275px;
+    bottom: -7%;
+    left: 32%;
+    width: 29%;
     height: 2px;
     transform: rotate(-3.484deg);
     background: #FFF;
@@ -327,7 +333,7 @@
     position: absolute;
     top: -24%;
     left: 40.5%;
-    width: 326.275px;
+    width: 29%;
     height: 2px;
     transform: rotate(-4.484deg);
     background: #FFF;
@@ -395,8 +401,9 @@
     background: rgba(255, 255, 255, 0.30);
     backdrop-filter: blur(4.5px);
     position: absolute;
-    bottom: -7.9%;
-    right: 0%;
+    bottom: 0;
+    right: 0;
+    left: 0;
     opacity: 0;
     transition: all 1s ease;
     z-index: 1;
@@ -418,11 +425,6 @@
 
 .connect:hover {
     color: var(--color-primary);
-}
-
-.started:hover {
-    background-color: var(--color-main);
-    color: #000;
 }
 
 .startedo:hover {
@@ -460,6 +462,14 @@ footer a svg:hover a {
     opacity: 1;
 }
 
+.mouse:hover {
+    transform: scale(1.2);
+}
+
+.mouse:hover .project-card {
+    opacity: 2;
+}
+
 .set:hover .service-card {
     background: rgba(255, 255, 255, 0.10);
     backdrop-filter: blur(8px);
@@ -467,18 +477,14 @@ footer a svg:hover a {
     outline: 1px solid rgba(255, 255, 255, 0.10);
 }
 
-.mouse:hover img {
-    transform: scale(1.2);
-    position: relative;
-    z-index: 1;
+@media (max-width: 2134px) {
+    .height-custum {
+        min-height: 100vh;
+    }
+
 }
 
-.mouse:hover .project-card {
-    opacity: 2;
-    transform: scale(1.2);
-}
-
-@media (max-width:1200px) {
+@media (max-width:1199.8px) {
     label[id="nav"] {
         width: 30px;
         height: 24px;
@@ -507,7 +513,7 @@ footer a svg:hover a {
         height: 100vh;
         background-color: var(--color-primary);
         position: fixed;
-        top: 0%;
+        top: 0;
         z-index: 3;
         right: -100%;
         opacity: 1;
@@ -515,7 +521,7 @@ footer a svg:hover a {
     }
 
     .right-0 {
-        right: 0%;
+        right: 0;
     }
 
     .ml-198 {
@@ -524,52 +530,6 @@ footer a svg:hover a {
 
     .ellipes-bg-frame {
         display: none;
-    }
-
-     .project::after {
-        display: none;
-    }
-
-    .project::before {
-        display: none;
-    }
-
-    .project2::after {
-        display: none;
-    }
-
-    .project2::before {
-        display: none;
-    }
-
-    .about::after {
-        display: none;
-    }
-
-    .about::before {
-        display: none;
-    } 
-
-    .service::after {
-        display: none;
-    }
-
-    .service::before {
-        display: none;
-    }
-
-    .mouse:hover img {
-        transform: scale(1);
-        position: relative;
-        z-index: 1;
-    }
-
-    .mouse:hover .project-card {
-        transform: scale(1);
-    }
-
-    .mouse:hover .project-card {
-        opacity: 2;
     }
 
     .project-card {
@@ -589,7 +549,7 @@ footer a svg:hover a {
     }
 
     .ml-241 {
-        margin-left: 0px;
+        margin-left: 0;
     }
 
     .py-200 {
@@ -605,7 +565,7 @@ footer a svg:hover a {
         position: absolute;
         top: -11%;
         border-radius: 50%;
-        right: 1.5%;
+        right: -2%;
         opacity: 0;
         transition: all 1s ease-in-out;
     }
@@ -617,14 +577,22 @@ footer a svg:hover a {
         border-radius: 12px;
     }
 
-    .w-custum {
-        width: 100%;
+    .mouse:hover {
+        transform: scale(1);
+    }
+
+    .height-custum {
+        min-height: none;
     }
 }
 
-@media (max-width:576px) {
+@media (max-width:575.8px) {
     .started {
-        padding: 5px 21px;
+        padding: 5px 19px;
+    }
+
+    .startedso {
+        padding: 6px 17px;
     }
 
     .startedo {
@@ -639,6 +607,10 @@ footer a svg:hover a {
         display: none;
     }
 
+    .about::before {
+        top: 59%;
+    }
+
     .web::before {
         display: none;
     }
@@ -648,12 +620,12 @@ footer a svg:hover a {
     }
 
     .py-94 {
-        padding-top: 0;
-        padding-bottom: 0;
+        padding-top: 35px;
+        padding-bottom: 35px;
     }
 }
 
-@media (max-width:342px) {
+@media (max-width:342.8px) {
     .web::after {
         display: block;
         transform: rotate(-1.484deg) !important;

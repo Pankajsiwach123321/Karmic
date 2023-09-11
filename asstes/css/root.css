@@ -75,11 +75,11 @@
     font-family: var(--font-primary);
 }
 
-@media (max-width:992px) {
+@media (max-width:991.8px) {
     :root {
         --fs-sm: 16px;
         --fs-md: 20px;
-        --fs-lg: 47px;
+        --fs-lg: 31px;
         --fs-xl: 30px;
         /* font-weight: ; */
         --fw-sm: 300;
